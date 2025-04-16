@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio d'Amine Oubrahim, développeur web full-stack, passionné par le développement et les nouvelles technologies.">
+    <meta name="keywords" content="Amine Oubrahim, développeur web, portfolio, full-stack, HTML, CSS, JavaScript, Python, Node.js, React, MongoDB">
+    <meta name="author" content="Amine Oubrahim">
+    <meta property="og:title" content="Portfolio - Amine Oubrahim">
+    <meta property="og:description" content="Découvrez les projets et compétences d'Amine Oubrahim, développeur web full-stack passionné.">
+    <meta property="og:image" content="https://ton-username.github.io/portfolio/images/og-image.jpg">
+    <meta property="og:url" content="https://ton-username.github.io/portfolio">
+    <title>Portfolio - Amine Oubrahim</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #1a202c;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 2px solid #4a5568;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #cbd5e0;
+        }
+
+        nav {
+            background-color: #2d3748;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+            margin-top: 80px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #2d3748;
+        }
+
+        .projet,
+        .motivation,
+        .formation,
+        .competences,
+        .soft-skills,
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+        }
+
+        .projet h3 {
+            margin-top: 0;
+            color: #2c5282;
+        }
+
+        .btn-download {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #38a169;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .btn-download:hover {
+            background-color: #2f855a;
+        }
+
+        form input,
+        form textarea,
+        form button {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        form button {
+            background-color: #3182ce;
+            color: white;
+            border: none;
+        }
+
+        form button:hover {
+            background-color: #2b6cb0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2d3748;
+            color: white;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .competences ul,
+        .soft-skills ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .competences ul li,
+        .soft-skills ul li {
+            background-color: #edf2f7;
+            margin: 5px 0;
+            padding: 8px;
+            border-radius: 5px;
+        }
+    </style>
+
+    <script>
+        window.onbeforeunload = function () {
+            return "Êtes-vous sûr de vouloir quitter cette page ?";
+        };
+
+        function validateEmail(email) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            if (!validateEmail(email)) {
+                alert("L'adresse email n'est pas valide.");
+                return;
+            }
+            alert("Merci pour votre message ! Je vous répondrai dès que possible.");
+            document.getElementById('contactForm').reset();
+        }
+    </script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#formation">Formation</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#soft-skills">Soft Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Amine Oubrahim</h1>
+        <p>Développeur Web Full Stack en devenir - Curieux, motivé, toujours prêt à apprendre</p>
+    </header>
+
+    <section id="about">
+        <h2>À propos de moi</h2>
+        <div class="motivation">
+            <p>Passionné par l'informatique, je suis constamment à la recherche de nouvelles technologies à découvrir. Je vais débuter un Bachelor en Développement Web Full Stack à <strong>Nexa Digitall School à Bordeaux</strong> en septembre 2025.</p>
+            <p>J'utilise actuellement HTML, CSS, JavaScript et j’ai des bases en Python. Bien que je sois encore en apprentissage, je suis très motivé pour développer mes compétences, apprendre en entreprise, et contribuer de manière constructive à des projets concrets.</p>
+        </div>
+    </section>
+
+    <section id="formation">
+        <h2>Formation</h2>
+        <div class="formation">
+            <p><strong>Bac S option informatique</strong> - Lycée Elie Vinet, Barbezieux, 2015</p>
+            <p><strong>Bac +2 Gestion de Paie et Ressources Humaines (GDRH)</strong> - Noschool, Bordeaux, 2017</p>
+        </div>
+    </section>
+
+    <section id="projets">
+        <h2>Projets réalisés</h2>
+        <div class="projet">
+            <h3>Jeu Stratégique (type Risk)</h3>
+            <p>Un petit jeu de stratégie avec une carte interactive, réalisé pour mon Bac S. Ce projet m’a permis de manipuler des éléments graphiques et d’appliquer une logique de conquête de territoire.</p>
+        </div>
+        <div class="projet">
+            <h3>Logiciel de candidature automatique</h3>
+            <p>Un programme qui envoie automatiquement des candidatures sur HelloWork en fonction de mots-clés définis. Entièrement réalisé en ligne de commande.</p>
+        </div>
+        <div class="projet">
+            <h3>Logiciel de paie en Excel/VBA</h3>
+            <p>Un outil que j’ai développé dans le cadre d’une formation en gestion de paie. Il automatise le calcul des salaires en VBA sous Excel.</p>
+        </div>
+    </section>
+
+    <section id="competences">
+        <h2>Compétences techniques (Hard Skills)</h2>
+        <div class="competences">
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Python (notions de base)</li>
+                <li>Git/GitHub</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="soft-skills">
+        <h2>Compétences comportementales (Soft Skills)</h2>
+        <div class="soft-skills">
+            <ul>
+                <li>Travail d'équipe</li>
+                <li>Communication claire</li>
+                <li>Adaptabilité</li>
+                <li>Résolution de problèmes</li>
+                <li>Curiosité et apprentissage constant</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <form id="contactForm" onsubmit="handleSubmit(event)">
+            <input type="text" id="name" placeholder="Votre nom" required>
+            <input type="email" id="email" placeholder="Votre email" required>
+            <textarea id="message" rows="4" placeholder="Votre message" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Amine Oubrahim - <a href="mailto:aoubrahim08@gmail.com" style="color:white;">aoubrahim08@gmail.com</a></p>
+    </footer>
+</body>
+
+</html>
